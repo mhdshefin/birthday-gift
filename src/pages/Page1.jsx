@@ -27,7 +27,7 @@ function Page1() {
 
         <div className="btn-group">
           <button className="btn yes" onClick={() => navigate("/page3")}>
-            YES
+            NO
           </button>
            <button className="btn yes" onClick={() => navigate("/page3")}>
             NO
