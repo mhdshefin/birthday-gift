@@ -310,6 +310,7 @@ canvas {
 }
 
 
+
 /* Birthday text */
 .birthday-text {
   margin-top: 18px;
@@ -367,21 +368,42 @@ canvas {
   cursor: pointer;
   font-weight: bold;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.yes {
-  background: #ff5c8a;
   color: white;
 }
 
 .no {
-  background: #ffffff;
-  color: #ff5c8a;
+  background: linear-gradient(
+    135deg,
+    #ff7bbd,
+    #ff4f9a
+  );
+}
+
+.btn:hover {
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 
+    0 12px 25px rgba(255, 105, 180, 0.45),
+    inset 0 -3px 8px rgba(255, 255, 255, 0.3);
+}
+.btn:active {
+  transform: scale(0.96);
+  box-shadow: 
+    0 6px 14px rgba(255, 105, 180, 0.3);
+}
+.container {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.yes {
+  transition: 0.15s ease-in-out;
+   background: linear-gradient(
+    135deg,
+    #ff9acb,
+    #ff6fae
+  );
 }
 
 /* Animation */
