@@ -40,10 +40,10 @@ function Home() {
 
         <div className="btn-group">
           <button className="btn yes" onClick={() => navigate("/no")}>
-            NO
+            NO 
           </button>
           <button className="btn no" onClick={() => navigate("/no")}>
-            NO
+            NO 
           </button>
         </div>
       </div>
