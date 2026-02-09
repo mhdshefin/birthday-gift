@@ -13,7 +13,7 @@ function Page5() {
             ))}
 
             <div className="center-box">
-                <p className="surprise-text">DO YOU WHAT'S SPECIAL TODAY ?</p>
+                <p className="surprise-text">DO KNOW YOU WHAT'S SPECIAL TODAY ?</p>
 
 
                 <video
