@@ -14,7 +14,7 @@ function Home() {
   useEffect(() => {
     const now = new Date();
     const target = new Date();
-    target.setHours(24, 0, 0, 0);
+    target.setHours(0, 3, 0, 0);
 
     if (now >= target) {
       setShowCountdown(false);
