@@ -2,6 +2,7 @@ import "../App.css";
 import kissBg from "../assets/bg.png";
 import cardImg from "../assets/card.png";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import voice from "../assets/voic.mp3";
 
@@ -14,6 +15,9 @@ import gift from "../assets/gift.png";
 
 
 function Page7() {
+
+  const navigate = useNavigate();
+
   const audioRef = useRef(null);
   const canvasRef = useRef(null);
   const audioCtxRef = useRef(null);
@@ -69,21 +73,21 @@ function Page7() {
   }, []);
 
 
-const togglePlay = async () => {
-  if (!audioCtxRef.current) return;
+  const togglePlay = async () => {
+    if (!audioCtxRef.current) return;
 
-  if (audioCtxRef.current.state === "suspended") {
-    await audioCtxRef.current.resume();
-  }
+    if (audioCtxRef.current.state === "suspended") {
+      await audioCtxRef.current.resume();
+    }
 
-  if (!playing) {
-    await audioRef.current.play();
-  } else {
-    audioRef.current.pause();
-  }
+    if (!playing) {
+      await audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
 
-  setPlaying(!playing);
-};
+    setPlaying(!playing);
+  };
 
 
   return (
@@ -127,14 +131,19 @@ const togglePlay = async () => {
       </div>
 
       <div className="voice-box">
-  <button className="play-btn" onClick={togglePlay}>
-    {playing ? "⏸ Pause" : "▶ Play"}
-  </button>
+        <button className="play-btn" onClick={togglePlay}>
+          {playing ? "⏸ Pause" : "▶ Play"}
+        </button>
 
-  <canvas ref={canvasRef} width="220" height="60"></canvas>
+        <canvas ref={canvasRef} width="220" height="60"></canvas>
 
-  <audio ref={audioRef} src={voice} />
-</div>
+        <audio ref={audioRef} src={voice} />
+      </div>
+
+      <button className="btn yes mt-10" onClick={() => navigate("/page8")}>
+        NEED A SPECIAL GIFT ? 
+      </button>
+      <h2>click the button</h2>
 
       <div className="photo-grid">
         <div className="photo-card"><img src={img1} alt="" /></div>
